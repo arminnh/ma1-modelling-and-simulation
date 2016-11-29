@@ -1,0 +1,11 @@
+% functies testen
+
+% overschrijven van beleggersrekening naar ( beurgenoteerd fonds |  | )
+
+% op de eerste dag van elk kwartaal geld storten op de beleggersrekening
+%   1e kwartaal: 01/01 - 31/03
+... 2e kwartaal: 01/04 - 30/06
+... 3e kwartaal: 01/07 - 30/09
+... 4e kwartaal: 01/10 - 31/12
+% binnen een jaar elk kwartaal hetzelfde bedrag
+% elk jaar 

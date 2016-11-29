@@ -1,0 +1,7 @@
+function [ path ] = SN_simulateQuarterlyPath(price, mu, sigma, quartals)
+%UNTITLED3 Summary of this function goes here
+%   Detailed explanation goes here
+
+
+end
+

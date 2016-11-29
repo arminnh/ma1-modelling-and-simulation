@@ -1,0 +1,18 @@
+Bijgevoegd vind je de opgave van het tweede practicum. Het bestand MovieLens20M_Subset.mat bevat de benodigde gebruikersbeoordelingen voor de films in de databank van MovieLens.
+
+De deadline voor het practicum is vrijdag 23 december 2016.
+ 
+Het wordt aanbevolen de opgave door te nemen voor de oefenzitting op maandag 21 november 2016. Tijdens deze oefenzitting wordt er tijd voorzien om vragen met betrekking tot de opgave te stellen.
+ 
+Succes!
+ 
+ 
+ 
+Verduidelijkingen:
+* Bij de naamgeving voor je .m-bestanden negeer je de functieparameters. Zo zal dien je de functie function [a] = s0123456_someFunction(with,parameters) in het bestand s0123456_someFunction.m te plaatsen.
+* Plaats de elektronische versie van je verslag ook in de gecomprimeerde map die je Matlabbronbestanden bevat.
+
+Let op:
+* Respecteer de opgelegde naamgeving. 
+* Het is niet noodzakelijk om het meegeleverde bestand MovieLens20M_Subset.mat in te dienen.
+
