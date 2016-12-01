@@ -5,7 +5,6 @@ function [ path, yield ] = SN_simulatePensionFundInvestingPath(budget, pricePath
     
     runningCosts = 0.0125; % 1.25%
     initialFee = 0.03;     % 3% "Om fractionele eenheden van het BNP-fonds aan te kopen"
-    maxTaxReturn = 282;    % 282 euro
         
     path = budget * (1-initialFee);
      
@@ -15,13 +14,8 @@ function [ path, yield ] = SN_simulatePensionFundInvestingPath(budget, pricePath
         
         % yearly tax return of 30% of previous year's investment, max 282 euro. 
         % every 1st of april. use this money to invest in more shares
-        % assume first investment is in january
-        if q > 5 && mod(q, 4) == 2
-            taxReturn = 0.3 * sum(path(q-5:q-2));
-            if taxReturn > maxTaxReturn
-                taxReturn = maxTaxReturn;
-            end
-            budgetNet = budgetNet + taxReturn;
+        if quartals > 5 
+            
         end
         
         % buy new shares
@@ -30,10 +24,33 @@ function [ path, yield ] = SN_simulatePensionFundInvestingPath(budget, pricePath
         % budget increases with 2% each year
         if mod(q, 4) == 0
             budget = budget * 1.02;
-            maxTaxReturn = maxTaxReturn * 1.02;
         end
     end
 
     path = path .* pricePath; % convert shares into the money they are worth
     yield = (path(end) - investedCapital) / investedCapital;
+
 end
+
+1
+2
+3
+4
+5
+6*
+7
+8
+9
+10*
+11
+12
+13
+14*
+15
+16
+17
+18*
+19
+20
+21
+22*

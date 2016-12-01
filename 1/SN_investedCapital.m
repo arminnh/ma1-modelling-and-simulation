@@ -1,5 +1,5 @@
 function [ capital ] = SN_investedCapital(budget, quartals)
-%UNTITLED calculates budget after given amount of quartals
+% calculates budget after given amount of quartals
     capital = 0;
     
     while quartals > 0

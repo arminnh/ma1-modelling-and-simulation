@@ -7,13 +7,13 @@ load('Funds.mat')
 length = 60; % 60 months
 initialPrice = 114.55; % taken from http://www.morningstar.com/stocks/ARCX/VTI/quote.html
 
-fig = figure
-hold on
+fig = figure;
+hold on;
 for i = 1:10
     path = SN_simulatePath(initialPrice, mu, sigma, length);
-    plot(path)
+    plot(path);
 end
-hold off
-saveas(fig,  'ex5.png')
+hold off;
+saveas(fig,  'ex5.png');
 
 clear

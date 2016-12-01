@@ -1,7 +1,7 @@
 function [ mu, sigma ] = SN_estimateParameters( s )
-%SN_estimateParameters estimates parameters of log-yields of given price evolution vector
+% estimates parameters of log-yields of given price evolution vector
 
-    x = SN_logYields(s);
+    x = logYields(s);
                     
     sigma = std(x); 
     % de standaardafwijking van de log-rendementen is een 
