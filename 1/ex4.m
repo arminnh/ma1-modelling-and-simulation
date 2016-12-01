@@ -6,6 +6,7 @@ load('Funds.mat')
 [mu, sigma] = SN_estimateParameters(S(:, 1));
 length = 60; % 60 months
 initialPrice = 114.55; % taken from http://www.morningstar.com/stocks/ARCX/VTI/quote.html
+initialPrice = initialPrice * 0.94; % convert to euro
 
 fig = figure;
 hold on;

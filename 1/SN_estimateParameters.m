@@ -1,6 +1,6 @@
 function [ mu, sigma ] = SN_estimateParameters( s )
 % estimates parameters of log-yields of given price evolution vector
-
+    
     x = logYields(s);
                     
     sigma = std(x); 

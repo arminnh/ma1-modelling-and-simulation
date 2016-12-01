@@ -1,6 +1,5 @@
 function [ path, yield ] = SN_simulatePensionFundInvestingPath(budget, pricePath, quartals)
 % Simulate the path of a pension fund
-    
     investedCapital = SN_investedCapital(budget, quartals);
     
     runningCosts = 0.0125; % 1.25%

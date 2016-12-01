@@ -17,7 +17,7 @@ function [ path, yield ] = SN_simulateFundInvestingPath( budget, pricePath, quar
      
     for q = 2:quartals
         % each quartal, receive dividents on last quartal
-        dividend = pricePath(q-1) * quarterlyDividentYieldNet; 
+        dividend = path(q-1) * pricePath(q-1) * quarterlyDividentYieldNet; 
         
         % calculate net budget to buy shares
         budgetNet = (budget-transactionCosts) * (1-stockMarketTax);
