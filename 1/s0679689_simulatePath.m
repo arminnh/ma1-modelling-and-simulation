@@ -1,4 +1,4 @@
-function [path] = SN_simulatePath(initialPrice, mu, sigma, months)
+function [path] = s0679689_simulatePath(initialPrice, mu, sigma, months)
 % Simulate a Brownian motion
 
     path = initialPrice;

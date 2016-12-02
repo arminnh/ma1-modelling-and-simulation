@@ -1,4 +1,4 @@
-function [ path ] = SN_simulateQuarterlyPath(price, mu, sigma, quartals)
+function [ path ] = s0679689_simulateQuarterlyPath(price, mu, sigma, quartals)
 % Simulate the path of the worth of a fund for a given amount of quartals
     path = price;
     

@@ -1,7 +1,7 @@
-function [ path, yield ] = SN_simulateSaving(budget, rate, quartals)
+function [ path, yield ] = s0679689_simulateSaving(budget, rate, quartals)
 % Simulates the path of a savings account with given start budget and interest rate after a given amount of quartals
 
-    investedCapital = SN_investedCapital(budget, quartals);
+    investedCapital = s0679689_investedCapital(budget, quartals);
     path = budget;
     %deposited = budget;
     tax = 0.15;

@@ -1,4 +1,4 @@
-function [ capital ] = SN_investedCapital(budget, quartals)
+function [ capital ] = s0679689_investedCapital(budget, quartals)
 % calculates budget after given amount of quartals
     capital = 0;
     

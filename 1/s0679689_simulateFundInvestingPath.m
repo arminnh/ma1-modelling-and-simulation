@@ -1,10 +1,10 @@
-function [ path, yield ] = SN_simulateFundInvestingPath( budget, pricePath, quartals)
+function [ path, yield ] = s0679689_simulateFundInvestingPath( budget, pricePath, quartals)
 % Simulate the path of a distribution fund
 % path = "de totale nettoinventariswaarde van alle fractionele aandelen"
 % during main calculation, path = amount of shares
 % after main calculation, path = total net worth of shares at each quartal
     
-    investedCapital = SN_investedCapital(budget, quartals);
+    investedCapital = s0679689_investedCapital(budget, quartals);
     
     transactionCosts = 10;     % 10 euros
     stockMarketTax = 0.0027;   % 0.27%

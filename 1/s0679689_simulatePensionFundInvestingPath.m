@@ -1,6 +1,6 @@
-function [ path, yield ] = SN_simulatePensionFundInvestingPath(budget, pricePath, quartals)
+function [ path, yield ] = s0679689_simulatePensionFundInvestingPath(budget, pricePath, quartals)
 % Simulate the path of a pension fund
-    investedCapital = SN_investedCapital(budget, quartals);
+    investedCapital = s0679689_investedCapital(budget, quartals);
     
     runningCosts = 0.0125; % 1.25%
     initialFee = 0.03;     % 3% "Om fractionele eenheden van het BNP-fonds aan te kopen"
