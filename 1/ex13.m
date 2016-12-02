@@ -3,7 +3,4 @@
 
 close all
 
-N = 100000;
-N = 1000;
-
-compareSavingsAlternatives(750, 40, N, 0.05, '13');
+r0679689_compareSavingsAlternatives(750, 40, 100000, 0.05, 'ex13');

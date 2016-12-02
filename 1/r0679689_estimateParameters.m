@@ -1,7 +1,7 @@
-function [ mu, sigma ] = s0679689_estimateParameters( s )
+function [ mu, sigma ] = r0679689_estimateParameters( s )
 % estimates parameters of log-yields of given price evolution vector
     
-    x = logYields(s);
+    x = r0679689_logYields(s);
                     
     sigma = std(x); 
     % de standaardafwijking van de log-rendementen is een 

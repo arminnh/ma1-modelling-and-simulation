@@ -3,94 +3,75 @@
 close all
 format bank
 
-investedCapital = s0679689_investedCapital(1000, 40);
-sprintf('Invested capital: %f', investedCapital)
+investedCapital = r0679689_investedCapital(1000, 40);
+fprintf('Invested capital: %f\n', investedCapital)
 
-[path, yield] = s0679689_simulateSaving(1000, 0.01, 40);
-sprintf('Yield on savings with 1% interest: %f', yield)
+[path, yield] = r0679689_simulateSaving(1000, 0.01, 40);
+fprintf('Yield on savings with interest rate of 0.01: %f\n', yield)
 
 load('Funds.mat')
-[mu1, sigma1] = s0679689_estimateParameters(S(:,1));
-[mu2, sigma2] = s0679689_estimateParameters(S(:,2));
+[mu1, sigma1] = r0679689_estimateParameters(S(:,1));
+[mu2, sigma2] = r0679689_estimateParameters(S(:,2));
 quartals = 40;
 budget = 1000;
 
-fig1 = figure(1); % quarterly path VTI
-title('s0679689\_simulateQuarterlyPath(, 0.0062281, 0.0436201, 40)')
+fig1 = figure(1);
+subplot(1, 2, 1)
+title('simulateQuarterlyPath VTI')
+subplot(1, 2, 2)
+title('simulateFundInvestingPath VTI')
 
-fig2 = figure(2); % fund investment path
-title('s0679689\_simulateFundInvestingPath(1000, pricePath, 40)')
+fig2 = figure(2);
+subplot(1, 2, 1)
+title('simulateQuarterlyPath BNP')
+subplot(1, 2, 2)
+title('simulatePensionFundInvestingPath BNP')
 
-fig3 = figure(3); % quarterly path BNP
-title('s0679689\_simulateQuarterlyPath(38.2919, 0.0062281, 0.0436201, 40)')
+length = 500;
+yields1 = zeros(length, 1);
+yields2 = zeros(length, 1);
 
-fig4 = figure(4); % pension fund investment path
-title('s0679689\_simulatePensionFundInvesting(1000, pricePath, 40)')
-
-yields1 = zeros(25, 1);
-yields2 = zeros(25, 1);
-
-for i = 1:10000
+for i = 1:length
     set(0, 'CurrentFigure', fig1)
+    subplot(1, 2, 1)
     hold on;
-    pricePath = s0679689_simulateQuarterlyPath(S(end, 1), mu1, sigma1, quartals);
+    pricePath = r0679689_simulateQuarterlyPath(S(end, 1), mu1, sigma1, quartals);
     plot(pricePath);
     
-    set(0, 'CurrentFigure', fig2)
+    set(0, 'CurrentFigure', fig1)
+    subplot(1, 2, 2)
     hold on;
-    [path, yield] = s0679689_simulateFundInvestingPath(budget, pricePath, quartals);
+    [path, yield] = r0679689_simulateFundInvestingPath(budget, pricePath, quartals);
     yields1(i) = yield;
     plot(path);
     
-    set(0, 'CurrentFigure', fig3)
+    set(0, 'CurrentFigure', fig2)
+    subplot(1, 2, 1)
     hold on;
-    pricePath = s0679689_simulateQuarterlyPath(S(end, 2), mu2, sigma2, quartals);
+    pricePath = r0679689_simulateQuarterlyPath(S(end, 2), mu2, sigma2, quartals);
     plot(pricePath);
     
-    set(0, 'CurrentFigure', fig4)
+    set(0, 'CurrentFigure', fig2)
+    subplot(1, 2, 2)
     hold on;
-    [path, yield] = s0679689_simulatePensionFundInvestingPath(budget, pricePath, quartals);
+    [path, yield] = r0679689_simulatePensionFundInvestingPath(budget, pricePath, quartals);
     yields2(i) = yield;
     plot(path);
 end
 
-set(0, 'CurrentFigure', fig1)
+set(0, 'CurrentFigure', fig1);
+subplot(1, 2, 1);
 refline(0, S(end, 1));
-set(0, 'CurrentFigure', fig2)
+subplot(1, 2, 2);
 refline(0, investedCapital);
-set(0, 'CurrentFigure', fig3)
+set(0, 'CurrentFigure', fig2);
+subplot(1, 2, 1);
 refline(0, S(end, 2));
-set(0, 'CurrentFigure', fig4)
+subplot(1, 2, 2);
 refline(0, investedCapital);
-saveas(fig1, 's0679689_simulateQuarterlyPath.png');
-saveas(fig2, 's0679689_simulateFundInvestingPath.png');
-saveas(fig2, 's0679689_simulatePensionFundInvestingPath.png');
 
-sprintf('Yield on VTI funds: min %f, max %f, mean %f, median %f', [min(yields1), max(yields1)])
-sprintf('Yield on BNP pension funds: min %f, max %f, mean %f, median %f', [])
+saveas(fig1, 'r0679689_simulateFundInvestingPath.png');
+saveas(fig2, 'r0679689_simulatePensionFundInvestingPath.png');
 
-%{
-'VTI Fund Investing';
-for i = 20:20:160
-    %yields = s0679689_simulateFundInvesting(1000, i, S(:,1), 20);
-    [mean(yields) min(yields) max(yields)];
-end
-
-'BNP Fund Investing';
-for i = 20:20:160
-    %yields = s0679689_simulateFundInvesting(1000, i, S(:,2), 20);
-    [mean(yields) min(yields) max(yields)];
-end
-
-'VTI Pension Investing';
-for i = 20:20:160
-    yields = s0679689_simulatePensionFundInvesting(1000, i, S(:,1), 20);
-    [mean(yields) min(yields) max(yields)]
-end
-
-'BNP Pension Investing';
-for i = 20:20:160
-    yields = s0679689_simulatePensionFundInvesting(1000, i, S(:,2), 20);
-    [mean(yields) min(yields) max(yields)]
-end
-%}
+fprintf('Yield on VTI funds: min %f, max %f, mean %f, median %f\n', [min(yields1), max(yields1), mean(yields1), median(yields1)])
+fprintf('Yield on BNP pension funds: min %f, max %f, mean %f, median %f\n', [min(yields2), max(yields2), mean(yields2), median(yields2)])

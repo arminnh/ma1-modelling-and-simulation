@@ -1,5 +1,5 @@
-function [ capital ] = s0679689_investedCapital(budget, quartals)
-% calculates budget after given amount of quartals
+function [ capital ] = r0679689_investedCapital(budget, quartals)
+% calculates invested budget after given amount of quartals
     capital = 0;
     
     while quartals > 0

@@ -4,6 +4,9 @@
 close all;
 x = 689;
 
+N = 100000;
+N = 10000;
+
 for q = 40:40:160
-    compareSavingsAlternatives(250+x, q, 1000, 0.05, strcat('ex15-', q, '-quartals-'));
+    r0679689_compareSavingsAlternatives(250+x, q, N, 0.05, strcat('ex15-', int2str(q), '-quartals'));
 end
