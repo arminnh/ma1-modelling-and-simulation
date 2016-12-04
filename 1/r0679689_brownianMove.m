@@ -1,4 +1,4 @@
-function [ next_price ] = r0679689_brownianMove( current_price, mu, sigma, t )
+function [next_price] = r0679689_brownianMove(current_price, mu, sigma, t)
 % Simulate the brownian movement for t months
 
     if nargin < 4

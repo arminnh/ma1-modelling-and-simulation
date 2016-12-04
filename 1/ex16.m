@@ -4,7 +4,6 @@
 close all
 load('Funds.mat')
 
-budgets = [125, 250, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000];
 budgets = [125, 250, 500, 1000, 2000];
 quartals = 160;
 N = 100000;
@@ -16,7 +15,9 @@ for i=1:length(budgets)
     yields(i) = mean(pensionYields);
 end
 
-figure
-plot(yields)
+fig = figure;
+plot(budgets, yields);
+legend('rendementen');
+saveas(fig, 'ex16.png');
 
-fprintf('Mediaan van de eindrendementen: %f\n', median(yields))
+fprintf('Gegevens over de eindrendementen: min %f, max %f, mean %f, median %f\n', [min(yields), max(yields), mean(yields), median(yields)])

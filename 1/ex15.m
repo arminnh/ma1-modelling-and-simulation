@@ -1,4 +1,4 @@
-% Simuleer het rendement voor elk van de 3 scenario’s na 40, 80, 120 en 160 kwartalen 
+% Simuleer het rendement voor elk van de 3 scenario's na 40, 80, 120 en 160 kwartalen 
 % wanneer je spaarbudget steeds (250 + x) euro per kwartaal bedraagt, waarbij x de laatste 3 cijfers van je studentennummer zijn.
 
 close all;

@@ -1,4 +1,4 @@
-function [ yields ] = r0679689_simulateFundInvesting(budget, quartals, historicalPrice, N)
+function [yields] = r0679689_simulateFundInvesting(budget, quartals, historicalPrice, N)
 % Monte Carlo simulation of periodical investments in a distribution fund  
 
     % estimate parameters for the evolution of the fund's worth

@@ -3,7 +3,4 @@
 
 close all
 
-N = 100000;
-N = 10000;
-
-r0679689_compareSavingsAlternatives(750, 4*(60-22), N, 0.2, 'ex14');
+r0679689_compareSavingsAlternatives(750, 4*(60-22), 100000, 0.2, 'ex14');

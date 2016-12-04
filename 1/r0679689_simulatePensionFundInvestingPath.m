@@ -1,4 +1,4 @@
-function [ path, yield ] = r0679689_simulatePensionFundInvestingPath(budget, pricePath, quartals)
+function [path, yield] = r0679689_simulatePensionFundInvestingPath(budget, pricePath, quartals)
 % Simulate the path of the worth of investing in a pension fund with a certain pricePath
 % during main calculation, path = amount of shares
 % after main calculation, path = total net worth of shares at each quartal

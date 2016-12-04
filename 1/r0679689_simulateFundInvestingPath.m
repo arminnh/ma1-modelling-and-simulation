@@ -1,4 +1,4 @@
-function [ path, yield ] = r0679689_simulateFundInvestingPath(budget, pricePath, quartals)
+function [path, yield] = r0679689_simulateFundInvestingPath(budget, pricePath, quartals)
 % Simulate the path of the worth of investing in a distribution fund with a certain pricePath
 % path = "de totale nettoinventariswaarde van alle fractionele aandelen"
 % during main calculation, path = amount of shares
