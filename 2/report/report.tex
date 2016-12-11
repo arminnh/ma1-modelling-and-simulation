@@ -1,0 +1,198 @@
+\documentclass[11pt, a4paper, titlepage, openright]{article}
+
+\usepackage{amsmath}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{float}
+\restylefloat{figure}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage[titletoc, title]{appendix}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{fixltx2e}
+\usepackage[bottom]{footmisc}
+
+\usepackage[a4paper, total={6.5in, 9.5in}]{geometry}
+
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{epstopdf}
+\usepackage{amssymb}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\footnotesize\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  showstringspaces=false,
+  keepspaces=true,
+  columns=flexible
+  }
+
+\newenvironment{verbquote}
+	{\catcode `^=12% Math superscript
+	\catcode `_=12% Math subscript
+	\catcode `$=12% Math deliniation
+	\begin{quote}}
+	{\end{quote}}
+
+\begin{document}
+\input{title_page.tex}
+\tableofcontents
+\newpage
+
+\noindent In dit verslag worden oplossingen gegeven voor de opdrachten in het practicum. 
+De code voor alle opdrachten staat onder appendix A.
+
+\section{Een aanbevelingssysteem voor films}
+	\subsection{Matrixvervollediging}
+	
+	\subsubsection{Opdracht 2}		
+    Om de volle beoordelingenmatrix \textbf{full(R)} (met \( R \in \mathbb{R}^{m \times n} \)) voor te stellen 
+    is er \( 8 \times m \times n \) bytes geheugenruimte nodig. \\
+
+    Om een matrix in coordinaatformaat op te slaan zijn er verzamelingen van rij-indices \(i\),
+    kolom-indices \(j\), en waarden \( r_{i,j} \) nodig. De verzamelingen van indices kunnen bestaan
+    uit gehele getallen. Er is dus \( 4 \times r + 4 \times r + 8 \times r = 16 \times r \) bytes
+    geheugenruimte nodig voor het coordinaatformaat, waarbij r het aantal niet-nulwaarden is van \( R\). \\
+
+    Om de rang-r lagerangbenadering 
+    \[ R \approx WF^T = w_1 f_1^T + w_2 f_2^T + ... + w_r f_r^T \]
+    voor te stellen is er \( 8 \times m \times r + 8 \times n \times r = 8r (m + n) \) bytes geheugenruimte nodig.
+
+	\subsubsection{Opdracht 3}
+
+	\subsubsection{Opdracht 4}
+
+	\subsubsection{Opdracht 5}
+
+	\subsubsection{Opdracht 6}
+
+	\subsubsection{Opdracht 7}
+
+	\subsubsection{Opdracht 8}
+
+	\subsubsection{Opdracht 9}
+
+	\subsubsection{Opdracht 10}
+
+	\subsubsection{Opdracht 11}
+
+	\subsubsection{Opdracht 12}
+
+	\subsubsection{Opdracht 13}
+
+	\subsubsection{Opdracht 14}
+
+	\subsubsection{Opdracht 15}
+
+
+	\subsection{Clustering}
+
+	\subsubsection{Opdracht 16}
+
+	\subsubsection{Opdracht 17}
+
+	\subsubsection{Opdracht 18}
+
+	\subsubsection{Opdracht 19}
+		
+		
+\section{Evaluatie}
+	
+	\subsection{Opdracht 21}
+		\begin{quote}
+			Hoeveel tijd heb je gespendeerd aan het oplossen van de opdrachten? 
+			Hoeveel tijd heb je gespendeerd aan het schrijven van het verslag?
+		\end{quote}
+		\noindent 
+	
+	\subsection{Opdracht 22}
+		\begin{quote}
+			In de loop van deze opdracht hebben we allerhande veronderstellingen gemaakt om ons
+nieuw aanbevelingssysteem op te stellen. Wat zijn je bedenkingen hierbij? Vind je de resultaten realis-
+tisch? Zou je het ontwikkelde aanbevelingssysteem durven toevoegen aan de lijst van aanbevelingssyste-
+men van MovieLens?
+		\end{quote}
+		
+		
+	
+	\subsection{Opdracht 23}
+		\begin{quote}
+			Welke bedenkingen heb je bij dit practicum? Was de opdracht (veel) te gemakkelijk, (veel) te moeilijk of 
+			van een gepaste moeilijkheidsgraad? Wat zou je zelf anders aangepakt hebben?  Was de terminologie voldoende duidelijk?
+		\end{quote}
+		
+		
+	
+
+\onecolumn
+\appendix
+\appendixpage
+\addappheadtotoc
+
+\section{Code}
+	\subsection{Opdrachten}
+		\subsubsection{Opdracht 2}
+			%\lstinputlisting[basicstyle=\scriptsize]{../r0679689_estimateParameters.m}
+		\bigskip
+		
+	\subsection{Extra Functies}
+		\subsubsection{r0679689\_blabla}
+			%\lstinputlisting[basicstyle=\scriptsize]{../r0679689_brownianMove.m}
+		\bigskip
+		
+\end{document}
+
+
+
+\iffalse
+	We are given the function
+	\[
+		\begin{aligned}
+		f(x) = 1 + T_6(x)    && -1 \le x \le 1
+		\end{aligned}
+	\]
+	
+	where \(T_6(x)\) is the Chebyshev polynomial of degree 6.
+	We are tasked to calculate the exact integral \[ I = \int_{-1}^1 \! f(x) \, \mathrm{d}x \] using Maple.
+	Also, we are tasked to calculate following numerical approximations using Matlab for up to 2 significant numbers:
+	\begin{itemize}
+		\item The composite trapezoid rule for \( I \)
+		\item \( I \) via a Gauss-Legendre integration rule
+		\item Monte Carlo integration of  \( I \)
+	\end{itemize}
+	
+	\begin{figure}[H]
+		\begin{minipage}[b]{0.49\textwidth}
+			% \includegraphics[width=1.0\textwidth]{../maple/mapleChebyPlot.png}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[b]{0.49\textwidth}
+			\end{minipage}
+		\caption{Two plots of the given function.}
+		\label{fig:function}
+	\end{figure}
+	
+	\begin{lstlisting}
+		f := x -> 1 + ChebyshevT(6, x);
+		int(f(x), x = -1 .. 1);
+	\end{lstlisting}
+\fi

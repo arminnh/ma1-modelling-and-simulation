@@ -9,6 +9,7 @@ Succes!
  
  
 Verduidelijkingen:
+* Versie 0 van de opgave bevat een fout in Algorithm 1: E_j moet E_{j-1} zijn in regel 3. Versie 1 van de opgave bevat deze fout niet.
 * Bij de naamgeving voor je .m-bestanden negeer je de functieparameters. Zo zal dien je de functie function [a] = s0123456_someFunction(with,parameters) in het bestand s0123456_someFunction.m te plaatsen.
 * Plaats de elektronische versie van je verslag ook in de gecomprimeerde map die je Matlabbronbestanden bevat.
 
