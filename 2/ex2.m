@@ -1,4 +1,5 @@
 close all
+clear
 
 m = 48769;
 n = 4901;

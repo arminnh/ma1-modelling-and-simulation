@@ -1,3 +1,5 @@
+close all
+clear
 load('MovieLens20M_Subset.mat')
 
 fig = figure;
