@@ -18,7 +18,7 @@ function [X] = r0679689_sparseModel(Uk, sk, Vk, A)
     [I, J] = find(A);
     
     X(I, J) = Uk(I, :) * S * Vk(J, :)';
-    %whos X
+    X(A == 0) = 0;
     
     %{
     % FULL MATRIX VERSION
