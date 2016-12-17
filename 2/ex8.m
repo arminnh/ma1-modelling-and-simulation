@@ -1,8 +1,6 @@
-clear
 load('MovieLens20M_Subset.mat')
 
 mu = r0679689_userMeans(R);
-
 [sorted, indices] = sort(mu);
 
 fprintf('De drie laagste gemiddelde beoordelingen zijn: \n')

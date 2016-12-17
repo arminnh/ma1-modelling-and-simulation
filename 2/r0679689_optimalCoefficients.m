@@ -1,22 +1,18 @@
 function [s] = r0679689_optimalCoefficients(Uk, Vk, A)
 % find the optimal solution for least squares problem min(|| a - Bx ||)
 
-    a = A(:);
-    mn = length(a);
-
     [m, k] = size(Uk);
     [n, ~] = size(Vk);
     
     % SPARSE MATRIX VERSION 2
-    B = sparse(mn, k);
+    B = sparse(m*n, k);
     for i = 1:k
         tmp = r0679689_sparseModel(Uk(:, i), 1, Vk(:, i), A);
         B(:, i) = tmp(:);
     end
     %whos B
     
-    a = A(:);
-    s = lsqr(B, a);
+    s = lsqr(B, A(:));
     
     %{
     % SPARSE MATRIX VERSION 1
@@ -40,4 +36,3 @@ function [s] = r0679689_optimalCoefficients(Uk, Vk, A)
     whos BBB
     %}
 end
-

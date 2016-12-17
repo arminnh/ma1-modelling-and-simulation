@@ -3,13 +3,13 @@
 A = [11 22 33 12 58 78 45 0; 
      44  0 66  5  0  2  0 0; 
      77 88  0  0  0  0  0 0;
-      0  7  0  0  0  4  5 0]
+      0  7  0  0  0  4  5 0];
 
 fprintf('norm(A, "fro") = %f \n', norm(A, 'fro'))
 fprintf('norm(A(:), "fro") =  %f \n', norm(A(:), 'fro'))
 fprintf('norm(A(:)) = %f \n', norm(A(:)))
 
-[U S V] = svd(A);
+[U, S, V] = svd(A);
 S
 fprintf('norm(A - U*S*V", "fro") = %f \n', norm(A - U*S*V', 'fro'))
 
@@ -25,4 +25,3 @@ fprintf('norm(A - U(:, 1:2)*s_result*V(:, 1:2)", "fro") = %f \n', norm(A - U(:, 
 
 s_result = diag(r0679689_optimalCoefficients(U(:, 1), V(:, 1), A))
 fprintf('norm(A - U(:, 1)*s_result*V(:, 1)", "fro") = %f \n', norm(A - U(:, 1)*s_result*V(:, 1)', 'fro'))
-

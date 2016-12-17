@@ -17,6 +17,7 @@ OUT
 
 Also, approximation R' = W * F' = U * diag(s) * V'
 %}
+
     [m, n] = size(R);
     rmse = zeros(k,1);
     U = zeros(m,k);
@@ -27,6 +28,7 @@ Also, approximation R' = W * F' = U * diag(s) * V'
     P = r0679689_sparseModel(U(:,1),1,V(:,1),T);
     E = R - S;
     rmse(1) = r0679689_RMSE(T,P);
+    fprintf('calculated for j = 1\n')
     
     for j = 2 : k 
         [u,~,v] = svds(E,1);
@@ -37,5 +39,6 @@ Also, approximation R' = W * F' = U * diag(s) * V'
         P = r0679689_sparseModel(U(:,1:j),s,V(:,1:j),T);
         E = R - S;
         rmse(j) = r0679689_RMSE(T,P);
+        fprintf('calculated for j = %i', k)
     end
 end
