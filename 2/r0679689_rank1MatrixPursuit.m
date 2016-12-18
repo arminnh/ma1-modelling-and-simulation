@@ -24,13 +24,14 @@ Also, approximation R' = W * F' = U * diag(s) * V'
     V = zeros(n,k);
     U(:,1) = r0679689_userMeans(R);
     V(:,1) = ones(n,1);
+    fprintf('processing for j = 1\n')
     S = r0679689_sparseModel(U(:,1),1,V(:,1),R);
     P = r0679689_sparseModel(U(:,1),1,V(:,1),T);
     E = R - S;
     rmse(1) = r0679689_RMSE(T,P);
-    fprintf('calculated for j = 1\n')
     
     for j = 2 : k 
+        fprintf('processing for j = %i\n', j)
         [u,~,v] = svds(E,1);
         U(:,j) = u;
         V(:,j) = v;
@@ -39,6 +40,5 @@ Also, approximation R' = W * F' = U * diag(s) * V'
         P = r0679689_sparseModel(U(:,1:j),s,V(:,1:j),T);
         E = R - S;
         rmse(j) = r0679689_RMSE(T,P);
-        fprintf('calculated for j = %i', k)
     end
 end

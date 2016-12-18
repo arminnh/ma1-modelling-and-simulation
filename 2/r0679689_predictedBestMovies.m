@@ -11,7 +11,7 @@ function [movieIDs, score] = r0679689_predictedBestMovies(Uk, sk, Vk)
     memory complexity constraint = O(max(m, n))
 
     example matrix 48769 x 4901 => SVD with k = 20: 48769x20 * 20x20 * 4901x20
-    48769 * 4901 * 8 / 1024^3 = 1.78 TB
+    48769 * 4901 * 8 / 1024^3 = 1.78 GB
 %}
 
     [m, k] = size(Uk);
@@ -21,9 +21,10 @@ function [movieIDs, score] = r0679689_predictedBestMovies(Uk, sk, Vk)
         error('Rank k of approximation should be less than min(m, n)')
     end
     
+    
     score = zeros(n, 1);
     for movie = 1:n
-        approxRatingsForMovie = Uk * diag(sk) * Vk(:, movie)';
+        approxRatingsForMovie = Uk * (sk .* Vk(movie, :)');
         % mem complexity of Uk                            = O(m * k)
         % mem complexity of Uk * diag(sk)                 = O(m * k)
         % mem complexity of Uk * diag(sk) * Vk(:, movie)' = O(m * 1)
@@ -31,8 +32,8 @@ function [movieIDs, score] = r0679689_predictedBestMovies(Uk, sk, Vk)
         % to an accumulator per movie and then calculate the averages => O(max(m, n))
         score(movie) = mean(approxRatingsForMovie);
     end
-    [movieIDs, score] = sort(score);
-
+    [score, movieIDs] = sort(score, 'descend');
+       
     % Rk = Uk * diag(sk) * Vk'; 
     % [movieIDs, score] = r0679689_actualBestMovies(Rk);
     % memory complexity: m * n > max(m, n), this will not fit in memory  
