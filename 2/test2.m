@@ -1,5 +1,5 @@
 %clear
-%clc
+clc
 format long
 load('MovieLens20M_Subset.mat')
 
@@ -20,6 +20,9 @@ test = [    4.0 4.5 0.0 5.0 0.0 3.5;
             0.0 4.5 0.0 5.0 3.5 4.0;
             4.0 3.0 0.0 0.0 2.0 2.0;    ];
     
+% 1200 x 600
+%test = sparse(repmat(test, 100));
+
 % full matrix of predicted reviews, size = 12 x 6
 [U, s, V, rmse] = r0679689_rank1MatrixPursuit(test, 3, test);
 test = U*diag(s)*V';
@@ -38,22 +41,28 @@ v = mean(test)';
 one = ones(m, 1);
 
 %part = (tmp - one * v') * diag(1 ./ diag(S));
-part = (test - one * v') * S^-1;
+part = test - v';
 % C = correlation matrix of given matrix of reviews, size(C) = n x n = 6 x 6
-C = (1 / (m - 1)) * (part' * part);
-disp(C)
+C = (part' * part);
+C = C ./ (std(test) .* std(test)');
+C = C / (m - 1);
+num2str(C, '%.2f  ')
+%disp(C)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%profile on
 C = r0679689_correlationMatrix(U, s, V);
+%profile viewer
 num2str(C, '%.2f  ')
 
+%{
 for i = 1:6
     IDs = r0679689_similarMovies(C, i, 3);
     
     fprintf('%i most similar movies for %i:\n', 3, i)
     disp(IDs)
 end
+%}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
