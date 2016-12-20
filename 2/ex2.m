@@ -13,7 +13,6 @@ fig = figure;
 hold on;
 plot(r, coordinaatSize);
 plot(r, lagerangSize);
-plot(r, fullSize);
-legend('Coordinaatformaat', 'Lagerangbenadering', 'fullSize');
+legend('Coordinaatformaat', 'Lagerangbenadering');
 
 saveas(fig, 'ex2.png')

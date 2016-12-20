@@ -6,7 +6,7 @@ function [X] = r0679689_sparseModel(Uk, sk, Vk, A)
     for val = 1:length(i)
         v(val) = Uk(i(val), :) .* sk' * Vk(j(val), :)';
     end
-    X = sparse(i, j, v);
+    X = sparse(i, j, v, size(A, 1), size(A, 2));
 end
 
 %{

@@ -1,3 +1,5 @@
+clear
+clc
 load('MovieLens20M_Subset.mat')
 
 n = 25;
@@ -25,12 +27,12 @@ OUTPUT
 
 Processing actualBestMovies...
 4.31, 938,Band of Brothers (2001)                                                   
-4.29,4455,Death on the Staircase (Soupçons) (2004)                                  
+4.29,4455,Death on the Staircase (Soupï¿½ons) (2004)                                  
 4.24, 510,City of God (Cidade de Deus) (2002)                                       
 4.23,1750,Lives of Others, The (Das leben der Anderen) (2006)                       
 4.23,2486,Dark Knight, The (2008)                                                   
 4.20, 390,Spirited Away (Sen to Chihiro no kamikakushi) (2001)                      
-4.20, 183,Amelie (Fabuleux destin d'Amélie Poulain, Le) (2001)                      
+4.20, 183,Amelie (Fabuleux destin d'Amï¿½lie Poulain, Le) (2001)                      
 4.18,4418,Frozen Planet (2011)                                                      
 4.18,3477,Inception (2010)                                                          
 4.16, 822,Lord of the Rings: The Return of the King, The (2003)                     
@@ -47,11 +49,11 @@ Processing actualBestMovies...
 4.08,4549,Louis C.K.: Oh My God (2013)                                              
 4.08,3786,Louis C.K.: Shameless (2007)                                              
 4.08,4755,Normal Heart, The (2014)                                                  
-4.08, 942,Best of Youth, The (La meglio gioventù) (2003)                            
+4.08, 942,Best of Youth, The (La meglio gioventï¿½) (2003)                            
 4.07,3784,Louis C.K.: Chewed Up (2008)                  
       
 Processing predictedBestMovies...                      
-4.09, 183,Amelie (Fabuleux destin d'Amélie Poulain, Le) (2001)         
+4.09, 183,Amelie (Fabuleux destin d'Amï¿½lie Poulain, Le) (2001)         
 4.07, 822,Lord of the Rings: The Return of the King, The (2003)        
 4.07,2486,Dark Knight, The (2008)                                      
 4.06, 194,Lord of the Rings: The Fellowship of the Ring, The (2001)    
@@ -66,7 +68,7 @@ Processing predictedBestMovies...
 3.90, 497,Pianist, The (2002)                                          
 3.90,1928,Pan's Labyrinth (Laberinto del fauno, El) (2006)             
 3.90, 196,Beautiful Mind, A (2001)                                     
-3.90,2586,WALL·E (2008)                                                
+3.90,2586,WALLï¿½E (2008)                                                
 3.90,1955,Prestige, The (2006)                                         
 3.88, 761,Kill Bill: Vol. 1 (2003)                                     
 3.87, 625,Finding Nemo (2003)                                          
