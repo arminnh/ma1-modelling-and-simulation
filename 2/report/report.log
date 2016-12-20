@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.11.11)  20 DEC 2016 01:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.11.11)  20 DEC 2016 21:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -546,35 +546,59 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 \sectionRuleOffset@mlpr=\skip55
 \toks@mlpr=\toks28
 )
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen149
+\lightrulewidth=\dimen150
+\cmidrulewidth=\dimen151
+\belowrulesep=\dimen152
+\belowbottomsep=\dimen153
+\aboverulesep=\dimen154
+\abovetopsep=\dimen155
+\cmidrulesep=\dimen156
+\cmidrulekern=\dimen157
+\defaultaddspace=\dimen158
+\@cmidla=\count136
+\@cmidlb=\count137
+\@aboverulesep=\dimen159
+\@belowrulesep=\dimen160
+\@thisruleclass=\count138
+\@lastruleclass=\count139
+\@thisrulewidth=\dimen161
+)
 \@float@every@figure=\toks29
 
 
 LaTeX Warning: Unused global option(s):
     [openright].
 
-(./report.aux)
+(./report.aux
+
+LaTeX Warning: Label `fig:ex2' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 52.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    ... okay on input line 52.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -612,16 +636,16 @@ LaTeX Font Info:    ... okay on input line 49.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count136
-\scratchdimen=\dimen149
+\scratchcounter=\count140
+\scratchdimen=\dimen162
 \scratchbox=\box35
-\nofMPsegments=\count137
-\nofMParguments=\count138
+\nofMPsegments=\count141
+\nofMParguments=\count142
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count139
-\MPscratchDim=\dimen150
-\MPnumerator=\count140
-\makeMPintoPDFobject=\count141
+\MPscratchCnt=\count143
+\MPscratchDim=\dimen163
+\MPnumerator=\count144
+\makeMPintoPDFobject=\count145
 \everyMPtoPDFconversion=\toks31
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -631,24 +655,24 @@ Package caption Info: rotating package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box36
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 52.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count142
+\c@section@level=\count146
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
 
 (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
-\c@lstlisting=\count143
+\c@lstlisting=\count147
  (./title_page.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 63.
 
@@ -669,106 +693,111 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.52 \newpage
+l.55 \newpage
               [1]
-Overfull \hbox (1.4899pt too wide) in paragraph at lines 62--68
+Overfull \hbox (1.4899pt too wide) in paragraph at lines 65--71
 []\OT1/cmr/m/n/10.95 Hoeveel geheugen-ruimte is nodig om de volle beo-ordelin-g
 en-ma-trix full(R) voor te stellen? 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--72
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
-<../ex2.png, id=219, 429.2838pt x 310.761pt>
+<../ex2.png, id=239, 429.2838pt x 310.761pt>
 File: ../ex2.png Graphic file (type png)
  <use ../ex2.png>
-Package pdftex.def Info: ../ex2.png used on input line 83.
+Package pdftex.def Info: ../ex2.png used on input line 86.
 (pdftex.def)             Requested size: 328.82706pt x 238.0396pt.
  [2]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no — in font cmr10!
+ [3 <../ex2.png (PNG copy)>]
 Missing character: There is no Î in font cmr10!
 Missing character: There is no ¶ in font cmr10!
- [3 <../ex2.png (PNG copy)>] [4] [5]
+ [4] <../ex11.png, id=288, 429.2838pt x 310.761pt>
+File: ../ex11.png Graphic file (type png)
+
+<use ../ex11.png>
+Package pdftex.def Info: ../ex11.png used on input line 189.
+(pdftex.def)             Requested size: 328.82706pt x 238.0396pt.
+ [5 <../ex11.png (PNG copy)>]
+Missing character: There is no Ã in font cmtt9!
+Missing character: There is no § in font cmtt9!
+Missing character: There is no Ã in font cmtt9!
+Missing character: There is no © in font cmtt9!
+ [6]
+Missing character: There is no Ã in font cmtt9!
+Missing character: There is no ¹ in font cmtt9!
+Missing character: There is no Ã in font cmtt9!
+Missing character: There is no © in font cmtt9!
+Missing character: There is no Â in font cmtt9!
+Missing character: There is no · in font cmtt9!
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--316
+
+ []
+
+[7] [8]
+Missing character: There is no Â in font cmtt9!
+Missing character: There is no · in font cmtt9!
+ [9] [10]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 220.
- (../ex2.m) (../ex4.m
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 9.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
-) (../ex5.m [6
-
-])
-(../ex6.m) (../ex8.m [7]) (../ex10.m) (../ex11.m) (../ex12.m) (../ex15.m
-[8]
-Missing character: There is no ï in font cmr8!
-Missing character: There is no ¿ in font cmr8!
-Missing character: There is no ½ in font cmr8!
-Missing character: There is no ï in font cmr8!
-Missing character: There is no ¿ in font cmr8!
-Missing character: There is no ½ in font cmr8!
-Missing character: There is no ï in font cmr8!
-Missing character: There is no ¿ in font cmr8!
-Missing character: There is no ½ in font cmr8!
-Missing character: There is no ï in font cmr8!
-Missing character: There is no ¿ in font cmr8!
-Missing character: There is no ½ in font cmr8!
-Missing character: There is no ï in font cmr8!
-Missing character: There is no ¿ in font cmr8!
-Missing character: There is no ½ in font cmr8!
- [9]) (../ex18.m) (../r0679689_sparseModel.m [10])
-(../r0679689_optimalCoefficients.m) (../r0679689_userMeans.m [11])
-(../r0679689_RMSE.m) (../r0679689_rank1MatrixPursuit.m
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 6.
+nput line 449.
+ (../r0679689_sparseModel.m
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 9.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 6.
- [12])
-(../r0679689_actualBestMovies.m) (../r0679689_predictedBestMovies.m)
-(../r0679689_correlationMatrix.m [13] [14]) (../r0679689_similarMovies.m)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 9.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 14.
 
-[15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
- (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
+)
+(../r0679689_optimalCoefficients.m [11
+
+]) (../r0679689_userMeans.m)
+(../r0679689_RMSE.m) (../r0679689_rank1MatrixPursuit.m [12])
+(../r0679689_actualBestMovies.m) (../r0679689_predictedBestMovies.m [13])
+(../r0679689_correlationMatrix.m [14]) (../r0679689_similarMovies.m) (../ex1.m)
+[15] (../ex2.m) (../ex4.m) (../ex5.m [16]) (../ex6.m) (../ex8.m [17])
+(../ex10.m) (../ex11.m) (../ex12.m) (../ex15.m [18]) (../ex18.m)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 501.
+ [19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 501.
+
+(./report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 501.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 501.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 8E2498032074083195F8E68653D1C5B4;2930.
 
 
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: AD95B48DF4A800C3198CDEC26FEE3404;2701
-(rerunfilecheck)             After:  60C6536BAC2C390D03DD50946CAF7D2D;2825.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 501.
  ) 
 Here is how much of TeX's memory you used:
- 11632 strings out of 494945
- 174330 string characters out of 6181031
- 477550 words of memory out of 5000000
- 14028 multiletter control sequences out of 15000+600000
+ 11992 strings out of 494945
+ 178769 string characters out of 6181031
+ 625753 words of memory out of 5000000
+ 14323 multiletter control sequences out of 15000+600000
  15533 words of font info for 57 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 42i,6n,57p,321b,1863s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,6n,56p,321b,1865s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/n/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0800.600pk><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
@@ -783,10 +812,10 @@ ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (16 pages, 235496 bytes).
+Output written on report.pdf (20 pages, 277336 bytes).
 PDF statistics:
- 1085 PDF objects out of 1200 (max. 8388607)
- 1039 compressed objects within 11 object streams
- 658 named destinations out of 1000 (max. 500000)
- 326 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1194 PDF objects out of 1200 (max. 8388607)
+ 1142 compressed objects within 12 object streams
+ 716 named destinations out of 1000 (max. 500000)
+ 363 words of extra memory for PDF output out of 10000 (max. 10000000)
 

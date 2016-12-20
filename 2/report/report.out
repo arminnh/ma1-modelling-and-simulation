@@ -1,6 +1,6 @@
 \BOOKMARK [1][-]{section.1}{Een aanbevelingssysteem voor films}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{Matrixvervollediging}{section.1}% 2
-\BOOKMARK [3][-]{subsubsection.1.1.1}{Opdracht }{subsection.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Opdracht 2}{subsection.1.1}% 3
 \BOOKMARK [3][-]{subsubsection.1.1.2}{Opdracht 3}{subsection.1.1}% 4
 \BOOKMARK [3][-]{subsubsection.1.1.3}{Opdracht 4}{subsection.1.1}% 5
 \BOOKMARK [3][-]{subsubsection.1.1.4}{Opdracht 5}{subsection.1.1}% 6
@@ -20,23 +20,25 @@
 \BOOKMARK [2][-]{subsection.2.2}{Opdracht 2}{section.2}% 20
 \BOOKMARK [2][-]{subsection.2.3}{Opdracht 3}{section.2}% 21
 \BOOKMARK [1][-]{section*.2}{Appendices}{}% 22
-\BOOKMARK [1][-]{appendix.A}{Code}{}% 23
-\BOOKMARK [2][-]{subsection.A.1}{Opdracht 2}{appendix.A}% 24
-\BOOKMARK [2][-]{subsection.A.2}{Opdracht 4}{appendix.A}% 25
-\BOOKMARK [2][-]{subsection.A.3}{Opdracht 5}{appendix.A}% 26
-\BOOKMARK [2][-]{subsection.A.4}{Opdracht 6}{appendix.A}% 27
-\BOOKMARK [2][-]{subsection.A.5}{Opdracht 8}{appendix.A}% 28
-\BOOKMARK [2][-]{subsection.A.6}{Opdracht 10}{appendix.A}% 29
-\BOOKMARK [2][-]{subsection.A.7}{Opdracht 11}{appendix.A}% 30
-\BOOKMARK [2][-]{subsection.A.8}{Opdracht 12}{appendix.A}% 31
-\BOOKMARK [2][-]{subsection.A.9}{Opdracht 15}{appendix.A}% 32
-\BOOKMARK [2][-]{subsection.A.10}{Opdracht 18}{appendix.A}% 33
-\BOOKMARK [2][-]{subsection.A.11}{r0679689\137sparseModel.m}{appendix.A}% 34
-\BOOKMARK [2][-]{subsection.A.12}{r0679689\137optimalCoefficients.m}{appendix.A}% 35
-\BOOKMARK [2][-]{subsection.A.13}{r0679689\137userMeans}{appendix.A}% 36
-\BOOKMARK [2][-]{subsection.A.14}{r0679689\137RMSE}{appendix.A}% 37
-\BOOKMARK [2][-]{subsection.A.15}{r0679689\137rank1MatrixPursuit.m}{appendix.A}% 38
-\BOOKMARK [2][-]{subsection.A.16}{r0679689\137actualBestMovies.m}{appendix.A}% 39
-\BOOKMARK [2][-]{subsection.A.17}{r0679689\137predictedBestMovies.m}{appendix.A}% 40
-\BOOKMARK [2][-]{subsection.A.18}{r0679689\137correlationMatrix.m}{appendix.A}% 41
-\BOOKMARK [2][-]{subsection.A.19}{r0679689\137similarMovies.m}{appendix.A}% 42
+\BOOKMARK [1][-]{appendix.A}{Functies}{}% 23
+\BOOKMARK [2][-]{subsection.A.1}{r0679689\137sparseModel.m}{appendix.A}% 24
+\BOOKMARK [2][-]{subsection.A.2}{r0679689\137optimalCoefficients.m}{appendix.A}% 25
+\BOOKMARK [2][-]{subsection.A.3}{r0679689\137userMeans}{appendix.A}% 26
+\BOOKMARK [2][-]{subsection.A.4}{r0679689\137RMSE}{appendix.A}% 27
+\BOOKMARK [2][-]{subsection.A.5}{r0679689\137rank1MatrixPursuit.m}{appendix.A}% 28
+\BOOKMARK [2][-]{subsection.A.6}{r0679689\137actualBestMovies.m}{appendix.A}% 29
+\BOOKMARK [2][-]{subsection.A.7}{r0679689\137predictedBestMovies.m}{appendix.A}% 30
+\BOOKMARK [2][-]{subsection.A.8}{r0679689\137correlationMatrix.m}{appendix.A}% 31
+\BOOKMARK [2][-]{subsection.A.9}{r0679689\137similarMovies.m}{appendix.A}% 32
+\BOOKMARK [1][-]{appendix.B}{Opdrachten}{}% 33
+\BOOKMARK [2][-]{subsection.B.1}{Opdracht 1}{appendix.B}% 34
+\BOOKMARK [2][-]{subsection.B.2}{Opdracht 2}{appendix.B}% 35
+\BOOKMARK [2][-]{subsection.B.3}{Opdracht 4}{appendix.B}% 36
+\BOOKMARK [2][-]{subsection.B.4}{Opdracht 5}{appendix.B}% 37
+\BOOKMARK [2][-]{subsection.B.5}{Opdracht 6}{appendix.B}% 38
+\BOOKMARK [2][-]{subsection.B.6}{Opdracht 8}{appendix.B}% 39
+\BOOKMARK [2][-]{subsection.B.7}{Opdracht 10}{appendix.B}% 40
+\BOOKMARK [2][-]{subsection.B.8}{Opdracht 11}{appendix.B}% 41
+\BOOKMARK [2][-]{subsection.B.9}{Opdracht 12}{appendix.B}% 42
+\BOOKMARK [2][-]{subsection.B.10}{Opdracht 15}{appendix.B}% 43
+\BOOKMARK [2][-]{subsection.B.11}{Opdracht 18}{appendix.B}% 44

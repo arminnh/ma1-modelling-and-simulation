@@ -4,6 +4,4 @@ function [movieIDs, score] = r0679689_actualBestMovies(R)
     
     means = r0679689_userMeans(R');
     [score, movieIDs] = sort(means, 'descend');
-
 end
-

@@ -1,16 +1,18 @@
 function [s] = r0679689_optimalCoefficients(Uk, Vk, A)
-% find the optimal solution for least squares problem min(|| a - Bx ||)
+% Finds the optimal solution for least squares problem min(|| a - Bx ||)
+% size(Uk) = m x k,   size(Vk) = n x k
+% memory constraint: O(kC), C = amount of nonzeros in A
 
     [m, k] = size(Uk);
     [n, ~] = size(Vk);
     
-    B = sparse([], [], [], m*n, k, nnz(A) * k);
+    B = sparse([], [], [], m*n, k, nnz(A) * k); % allocate space for k*C elements
     for i = 1:k
-        tmp = r0679689_sparseModel(Uk(:, i), 1, Vk(:, i), A);
+        tmp = r0679689_sparseModel(Uk(:, i), 1, Vk(:, i), A); % O(C)
         B(:, i) = tmp(:);
     end
 
-    s = lsqr(B, A(:));
+    [s, ~] = lsqr(B, A(:));
 end
 
 %{

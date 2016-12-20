@@ -22,16 +22,12 @@ tmp = [ 4.0 4.5 0.0 5.0 0.0 3.5;
 %in = sparse(repmat(tmp, 100));
 
 [U, s, V, rmse] = r0679689_rank1MatrixPursuit(tmp, 3, tmp);
-num2str(rmse, 4) % TODO: rmse(3) should be 0.2940
+num2str(rmse, 4)
 approx = U*diag(s)*V';
 num2str(approx', 2)
 
-%{
-[movieIDs, score] = r0679689_actualBestMovies(in)
+[movieIDs, score] = r0679689_actualBestMovies(tmp)
 [movieIDs, score] = r0679689_actualBestMovies(approx)
 [movieIDs, score] = r0679689_predictedBestMovies(U, s, V)
 
-tic
 [movieIDs, score] = r0679689_actualBestMovies(R)
-toc
-%}

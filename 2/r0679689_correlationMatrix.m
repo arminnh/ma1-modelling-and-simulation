@@ -1,24 +1,17 @@
 function [C] = r0679689_correlationMatrix(Uk, sk, Vk)
 % returns the correlation matrix C that belongs to the matrix formed by Uk * diag(sk) * Vk'
-%{
-    size(Uk) = m x k
-    size(sk) = k x 1
-    size(Vk) = n x k
-
-    size(C)  = n x n
-    memory complexity limit = O(k^2 + n^2)
-%}
+% size(Uk) = m x k, size(sk) = k x 1, size(Vk) = n x k
+% size(C)  = n x n
+% memory complexity limit = O(k^2 + n^2)
 
     [m, ~] = size(Uk);
     [n, ~] = size(Vk);
-    V = diag(sk) * Vk';       % O(kn), kn < k^2 + n^2
+    V = diag(sk) * Vk';       % O(k * n), kn < k^2 + n^2
     
     means = zeros(n, 1);      % O(n)
     stds = zeros(n, 1);       % O(n)
-    % calculate means and standard deviations in one pass
     for i = 1:n
         tmp = Uk * V(:, i);   % O(m)
-    
         means(i) = mean(tmp);
         stds(i) = std(tmp);
     end
@@ -27,9 +20,9 @@ function [C] = r0679689_correlationMatrix(Uk, sk, Vk)
     for i = 1:m/n
         row_from = 1+(i-1)*n;
         
-        R_k = Uk(row_from:min(row_from+n-1, m), :) * V - means';
+        R_j = Uk(row_from:min(row_from+n-1, m), :) * V - means'; % O(n * n)
         
-        C = C + (R_k' * R_k);
+        C = C + (R_j' * R_j);
     end    
     
     C = C ./ (stds .* stds') / (m - 1);
