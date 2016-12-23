@@ -88,20 +88,61 @@ De code voor alle opdrachten staat onder appendix A.
 		\label{fig:ex2}
 	\end{figure}
 
-    TODO: De twee functies snijden nooit en ik moet de berekening eens checken.
+    De twee functies snijden elkaar wanneer \( r = 134.02 \). \\
+    Zie \ref{appendix:ex2}. \\
 
 	\subsubsection{Opdracht 3}
     \begin{quote}
-        Bewijs dat \(\sigma_j\) de \(j^de\) grootste singuliere waarde van A is en dat
+        Bewijs dat \(\sigma_j\) de \(j^{de}\) grootste singuliere waarde van A is en dat
         \[ A - E_k = \sum\limits_{j=1}^{k} \sigma_j \textbf{u}_j \textbf{v}_j^T \]
         de rang-k (met \( k \leq r \)) afgeknotte singulierewaardeontbinding van A is.
+        Leid hieruit af dat algoritme 1 na exact r stappen stopt.
     \end{quote}
 
-    TODO: Bewijs eens uitschrijven.
+    Aangezien we weten dat de rang van \(A\) gelijk is aan r kunnen we \(A\) schrijven als
+    \[ A =  \sum\limits_{i=1}^{r} \sigma_i \textbf{u}_i \textbf{v}_i^T \]
+    We moeten dus aantonen dat
+    \[ \sum\limits_{i=1}^{r} \sigma_i \textbf{u}_i \textbf{v}_i^T - E_k
+       = \sum\limits_{j=1}^{k} \sigma_j \textbf{u}_j \textbf{v}_j^T \]
+
+    We doen dit door aan te tonen dat \( E_k = \sum\limits_{i=k+1}^{r} \sigma_i \textbf{u}_i \textbf{v}_i^T \) en dat
+    dit door algoritme 1 zal worden berekend. \\
+    \newpage
+
+    Op lijn 1 van het algoritme wordt \( E_0 \) gelijk gesteld aan \(A\). We krijgen dus \( E_0 = \sum\limits_{i=1}^{r} \sigma_i \textbf{u}_i \textbf{v}_i^T \).
+    \bigskip
+
+    Op lijn 4 wordt \( \sigma_j \) gezocht zodanig dat
+    \[ || E_{j-1} - \sigma_j \textbf{u}_j \textbf{v}_j^T ||_F = \min_{rank(B) \leq 1} || E_{j-1} - B ||_F \]
+    Dit wil zeggen dat we zoeken naar een \( \sigma_j \) zodat
+    \( \sigma_j \textbf{u}_j \textbf{v}_j^T = B \) de beste rang-1 benadering is van \( E_{j-1} \). \\
+    We weten dat \( || A ||_F = \sqrt{ \sigma_1^2 + ... + \sigma_r^2 } \) en dat
+    \( \min_{rank(B) \leq 1 } || A - B ||_F = \sqrt{ \sigma_{2}^2 + ... + \sigma_r^2 } \). Merk op dat hier uit
+    de vierkantswortel slechts 1 \( \sigma \) verdwijnt, aangezien B van rang 1 is. \\
+    Op lijn 4 wordt dus telkens de \( \sigma_j \) gezocht zodat het verschil \( ||E_{j-1} - \sigma_j \textbf{u}_j \textbf{v}_j^T ||_F \)
+    zo klein mogelijk wordt, ofwel, zodat uit \( || E_{j-1} ||_F\) de grootste \( \sigma_i \) wordt verwijderd.
+    Dit kan dus enkel als \( \sigma_j \) telkens de grootste singuliere waarde is van \( E_{j-1} \).
+    \bigskip
+
+    Op lijn 5 wordt de term \( \sigma_j \textbf{u}_j \textbf{v}_j^T \) uit de matrix verwijderd. Dit betekent
+    dus ook dat de grootste singuliere waarde uit de matrix wordt verwijderd. We krijgen:
+    \[ E_j = E_{j-1} - \sigma_j \textbf{u}_j \textbf{v}_j^T
+           = \sum\limits_{i=j}^{r} \sigma_i \textbf{u}_i \textbf{v}_i^T - \sigma_j \textbf{u}_j \textbf{v}_j^T
+           = \sum\limits_{i=j+1}^{r} \sigma_i \textbf{u}_i \textbf{v}_i^T \]
+
+    Hierbij hebben we gevonden waar we naar zochten:
+    \[ E_k = \sum\limits_{i=k+1}^{r} \sigma_i \textbf{u}_i \textbf{v}_i^T \]
+
+    \bigskip
+
+    Op lijn 3 zien we dat het algoritme zal blijven werken tot dat \( || E_{j-1} ||_2 \ne 0 \). We weten dat
+    de 2-norm van een matrix gelijk is aan zijn grootste singuliere waarde, dat elke iteratie de grootste singuliere
+    waarde uit de matrix wordt verwijderd, en dat \(A\) van rang \(r\) is (in andere woorden, \(A\) heeft r singuliere waarden).
+    Hieruit kunnen we dus besluiten dat het algoritme na r stappen zal stoppen.
 
 	\subsubsection{Opdracht 4}
     \begin{quote}
-        Stel dat we de stappen 4–6 van algoritme 1 slechts eenmaal zouden uitvoeren.
+        Stel dat we de stappen 4 - 6 van algoritme 1 slechts eenmaal zouden uitvoeren.
         Kan men dit algoritme dan toepassen op een 240 000 x 33 000 matrix met 22 miljoen niet-nulwaarden
         (i.e., de volledige MovieLens databank) op een laptop met 8GB werkgeheugen en 32GB swap geheugen? Waarom wel of niet?
     \end{quote}
@@ -351,6 +392,7 @@ C = C + (R_j' * R_j);
 	Output van de code (zie \ref{appendix:ex18}):
 \begin{lstlisting}
 10 most similar movies for Harry Potter and the Chamber of Secrets (2002) (id 446):
+    Harry Potter and the Chamber of Secrets (2002)
     Harry Potter and the Sorcerer's Stone (a.k.a. Harry Potter and the Philosopher's Stone) (2001)
     Harry Potter and the Goblet of Fire (2005)
     Harry Potter and the Prisoner of Azkaban (2004)
@@ -360,26 +402,26 @@ C = C + (R_j' * R_j);
     Harry Potter and the Deathly Hallows: Part 1 (2010)
     Pirates of the Caribbean: Dead Man's Chest (2006)
     Harry Potter and the Deathly Hallows: Part 2 (2011)
-    Pirates of the Caribbean: At World's End (2007)
 
 5 most similar movies for Captain America: The First Avenger (2011) (id 3854):
+    Captain America: The First Avenger (2011)
     Thor (2011)
     Amazing Spider-Man, The (2012)
     Iron Man 3 (2013)
     Quantum of Solace (2008)
-    Hellboy II: The Golden Army (2008)
 
 3 most similar movies for Zero Dark Thirty (2012) (id 4355):
+    Zero Dark Thirty (2012)
     Captain Phillips (2013)
     Rush (2013)
-    Lincoln (2012)
 
 3 most similar movies for Futurama: Bender's Game (2008) (id 2747):
+    Futurama: Bender's Game (2008)
     Futurama: The Beast with a Billion Backs (2008)
     Fido (2006)
-    World's End, The (2013)
 
 9 most similar movies for Monsters, Inc. (2001) (id 160):
+    Monsters, Inc. (2001)
     Finding Nemo (2003)
     Incredibles, The (2004)
     Shrek (2001)
@@ -387,8 +429,7 @@ C = C + (R_j' * R_j);
     Shrek 2 (2004)
     WALL·E (2008)
     Ice Age (2002)
-    Up (2009)
-    X2: X-Men United (2003)
+    Up (2009)   
 \end{lstlisting}
 
     Deze resultaten lijken mij heel realistisch. De flims die sterk positief correleren met elkaar zijn telkens
@@ -397,15 +438,15 @@ C = C + (R_j' * R_j);
     en films in dezelfde stijl of met detzelfde animatieflim studio's (Monsters, Inc.). \\
     Dit gedrag doet zich ook voor in andere aanbevelingssystemen.
 
-	\subsubsection{Opdracht 19}
-    \begin{quote}
-        Bewijs dat de correlatiematrix C in de vergelijking
-        \[ C = \frac{1}{m - 1} ((R_k - \boldsymbol{1}\boldsymbol{\mu}^T) \Sigma^{-1})^T ((R_k - \boldsymbol{1}\boldsymbol{\mu}^T) \Sigma^{-1}) \]
-        hoogstens rang r + 1 heeft wanneer de voorspelde beoordelingenmatrix
-        A exact rang r heeft.
-    \end{quote}
-
-    TODO: bewijs uitschrijven
+	% \subsubsection{Opdracht 19}
+    % \begin{quote}
+    %     Bewijs dat de correlatiematrix C in de vergelijking
+    %     \[ C = \frac{1}{m - 1} ((R_k - \boldsymbol{1}\boldsymbol{\mu}^T) \Sigma^{-1})^T ((R_k - \boldsymbol{1}\boldsymbol{\mu}^T) \Sigma^{-1}) \]
+    %     hoogstens rang r + 1 heeft wanneer de voorspelde beoordelingenmatrix
+    %     A exact rang r heeft.
+    % \end{quote}
+    %
+    % TODO: bewijs uitschrijven
 
 
 \section{Evaluatie}
@@ -415,7 +456,7 @@ C = C + (R_j' * R_j);
 			Hoeveel tijd heb je gespendeerd aan het oplossen van de opdrachten?
 			Hoeveel tijd heb je gespendeerd aan het schrijven van het verslag?
 		\end{quote}
-        Ik heb ongeveer 25 uur gespendeerd aan het oplossen van de opdrachten en ongeveer 8 uur aan het schrijven van het verslag.
+        Ik heb ongeveer 26 uur gespendeerd aan het oplossen van de opdrachten en ongeveer 8 uur aan het schrijven van het verslag.
 
 	\subsection{Opdracht 2}
 		\begin{quote}
@@ -473,6 +514,7 @@ C = C + (R_j' * R_j);
 	\subsection{Opdracht 1}
 		\lstinputlisting[style=Matlab-editor, basicstyle = \scriptsize]{../ex1.m}
 	\subsection{Opdracht 2}
+    \label{appendix:ex2}
 		\lstinputlisting[style=Matlab-editor, basicstyle = \scriptsize]{../ex2.m}
 	\subsection{Opdracht 4}
     \label{appendix:ex4}

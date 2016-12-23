@@ -3,7 +3,7 @@ function [moviedIDs] = r0679689_similarMovies(C, m, n)
 
     movies = C(m, :);
     [~, movies] = sort(movies, 'descend');
-    moviedIDs = movies(2:n+1);
+    moviedIDs = movies(1:n);
     
 end
 

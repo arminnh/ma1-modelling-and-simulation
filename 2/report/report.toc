@@ -2,22 +2,21 @@
 \contentsline {subsection}{\numberline {1.1}Matrixvervollediging}{2}{subsection.1.1}
 \contentsline {subsubsection}{\numberline {1.1.1}Opdracht 2}{2}{subsubsection.1.1.1}
 \contentsline {subsubsection}{\numberline {1.1.2}Opdracht 3}{3}{subsubsection.1.1.2}
-\contentsline {subsubsection}{\numberline {1.1.3}Opdracht 4}{3}{subsubsection.1.1.3}
-\contentsline {subsubsection}{\numberline {1.1.4}Opdracht 5}{4}{subsubsection.1.1.4}
-\contentsline {subsubsection}{\numberline {1.1.5}Opdracht 6}{4}{subsubsection.1.1.5}
-\contentsline {subsubsection}{\numberline {1.1.6}Opdracht 8}{4}{subsubsection.1.1.6}
-\contentsline {subsubsection}{\numberline {1.1.7}Opdracht 10}{4}{subsubsection.1.1.7}
-\contentsline {subsubsection}{\numberline {1.1.8}Opdracht 11}{5}{subsubsection.1.1.8}
-\contentsline {subsubsection}{\numberline {1.1.9}Opdracht 12}{5}{subsubsection.1.1.9}
-\contentsline {subsubsection}{\numberline {1.1.10}Opdracht 14}{6}{subsubsection.1.1.10}
-\contentsline {subsubsection}{\numberline {1.1.11}Opdracht 15}{6}{subsubsection.1.1.11}
-\contentsline {subsection}{\numberline {1.2}Clustering}{7}{subsection.1.2}
-\contentsline {subsubsection}{\numberline {1.2.1}Opdracht 16}{7}{subsubsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2}Opdracht 18}{8}{subsubsection.1.2.2}
-\contentsline {subsubsection}{\numberline {1.2.3}Opdracht 19}{9}{subsubsection.1.2.3}
-\contentsline {section}{\numberline {2}Evaluatie}{9}{section.2}
-\contentsline {subsection}{\numberline {2.1}Opdracht 1}{9}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Opdracht 2}{9}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Opdracht 4}{4}{subsubsection.1.1.3}
+\contentsline {subsubsection}{\numberline {1.1.4}Opdracht 5}{5}{subsubsection.1.1.4}
+\contentsline {subsubsection}{\numberline {1.1.5}Opdracht 6}{5}{subsubsection.1.1.5}
+\contentsline {subsubsection}{\numberline {1.1.6}Opdracht 8}{5}{subsubsection.1.1.6}
+\contentsline {subsubsection}{\numberline {1.1.7}Opdracht 10}{5}{subsubsection.1.1.7}
+\contentsline {subsubsection}{\numberline {1.1.8}Opdracht 11}{6}{subsubsection.1.1.8}
+\contentsline {subsubsection}{\numberline {1.1.9}Opdracht 12}{6}{subsubsection.1.1.9}
+\contentsline {subsubsection}{\numberline {1.1.10}Opdracht 14}{7}{subsubsection.1.1.10}
+\contentsline {subsubsection}{\numberline {1.1.11}Opdracht 15}{7}{subsubsection.1.1.11}
+\contentsline {subsection}{\numberline {1.2}Clustering}{8}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Opdracht 16}{8}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Opdracht 18}{9}{subsubsection.1.2.2}
+\contentsline {section}{\numberline {2}Evaluatie}{10}{section.2}
+\contentsline {subsection}{\numberline {2.1}Opdracht 1}{10}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Opdracht 2}{10}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Opdracht 3}{10}{subsection.2.3}
 \contentsline {section}{Appendices}{11}{section*.2}
 \contentsline {section}{\numberline {A}Functies}{11}{appendix.A}
